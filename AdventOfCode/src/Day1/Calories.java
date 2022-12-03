@@ -9,22 +9,22 @@ import java.util.List;
 public class Calories {
 	public static void main(String[] args) throws NumberFormatException, IOException {
 		
-		String calories = """
-				1000
-				2000
-				3000
-
-				4000
-
-				5000
-				6000
-
-				7000
-				8000
-				9000
-
-				10000
-				""";
+//		String calories = """
+//				1000
+//				2000
+//				3000
+//
+//				4000
+//
+//				5000
+//				6000
+//
+//				7000
+//				8000
+//				9000
+//
+//				10000
+//				""";
 		
 		BufferedReader br = new BufferedReader(new FileReader("calNumber.txt"));
 		
