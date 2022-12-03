@@ -33,12 +33,12 @@ public class RockPaperScissors {
 
 	public static void main(String[] args) throws IOException {
 		
-		String test = """
-			A Y
-			B X
-			C Z
-		""";
-		
+//		String test = """
+//			A Y
+//			B X
+//			C Z
+//		""";
+//		
 		
 		
 		BufferedReader br = new BufferedReader(new FileReader("E:\\Programming\\GitHub-Repos\\repoAdventOfCode\\AdventOfCode\\src\\Day2\\Rock.txt"));
@@ -49,8 +49,7 @@ public class RockPaperScissors {
 		while((line = br.readLine()) != null) {
 
 			strMatch = line.trim();
-			// x = lose y = draw z = win
-//			 1 = Rock a;  2 = Paper b; 3 = Scissors c
+		
 			switch (strMatch){
 			
 				case ("A Y"): result += 4;
