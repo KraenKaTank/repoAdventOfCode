@@ -1,8 +1,8 @@
 package Day2;
 
 import java.io.BufferedReader;
-import java.io.FileNotFoundException;
 import java.io.FileReader;
+import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -17,7 +17,7 @@ public class RockPaperTutorial {
 	final static int win = 6;
 	
 
-	public static void main(String[] args) throws FileNotFoundException {
+	public static void main(String[] args) throws IOException {
 		
 		Map<String, Integer>shapes = new HashMap<>();
 		shapes.put("A", rock);
@@ -27,19 +27,20 @@ public class RockPaperTutorial {
 		shapes.put("Y", paper);
 		shapes.put("Z", scissors);
 		
-		String testdata = """
-				A Y
-				B X
-				C Z
-				""";
+//		String testdata = """
+//				A Y
+//				B X
+//				C Z
+//				""";
+//		
+			BufferedReader br = new BufferedReader(new FileReader("E:\\Programming\\GitHub-Repos\\repoAdventOfCode\\AdventOfCode\\src\\Day2\\Rock.txt"));
 		
-		BufferedReader br = new BufferedReader(new FileReader("Rock.txt"));
+			int score = 0;
 		
-		int score = 0;
+			String line;
+			while((line = br.readLine()) != null){
 		
-		//String line;
-		//while((line = br.readLine()) != null){
-		for(String line : testdata.split("\n"));{
+	
 			String[] match = line.trim().split(" ");
 			
 			if(shapes.get(match[0]) == shapes.get(match[1])) {
@@ -53,10 +54,12 @@ public class RockPaperTutorial {
 			}else {
 				score += loss;
 			}
-		
-		
-		
-		
+			
+			score += shapes.get(match[1]);
+		}
+			
+			System.out.println(score);
+			br.close();
 	}
 
 }
